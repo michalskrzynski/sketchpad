@@ -1,0 +1,28 @@
+* {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0px;
+}
+
+div.page {
+  text-align: center;
+  width: 960px;
+
+  margin: 0 auto;
+  background-color: bisque;
+}
+
+div.touchpane {
+  display: flex;
+  flex-wrap: wrap;
+  /* normally we shouldnt worry about the distribution as it should fit perfectly,
+  but due to some division rounding (floor) the sum of boxes might not be exact 960. */
+  justify-content: center;
+  align-content: center;
+}
+
+div.pane-box {
+}
