@@ -17,6 +17,15 @@ div.popup {
   top: 0;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+div.popup-box {
+  background-color: chocolate;
+  width: 600px;
+  padding: 60px 10px;
+  color: black;
 }
 
 div.top {
@@ -34,6 +43,7 @@ div.header {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
@@ -57,12 +67,18 @@ div.page {
 }
 
 div.touchpane {
+}
+
+div#pane-hook {
   display: flex;
   flex-wrap: wrap;
   /* normally we shouldnt worry about the distribution as it should fit perfectly,
   but due to some division rounding (floor) the sum of boxes might not be exact 960. */
   justify-content: center;
   align-content: center;
+}
+
+div.pane-box {
 }
 
 div.pane-box:hover { 
