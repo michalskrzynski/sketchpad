@@ -28,4 +28,11 @@ const createBoxNode = function (boxSize) {
   return box;
 }
 
+
+
+
 drawPane( 'touchpane', 16);
+document.querySelector('#reset').addEventListener('click', () => {
+  let popup = document.querySelector('#popup');
+  popup.setAttribute( 'style', 'display: block') 
+});
