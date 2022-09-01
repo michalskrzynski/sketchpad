@@ -3,7 +3,8 @@ const screenWidth = 960;
 //paneId can come with or no # sign
 const drawPane = function(paneId, xBoxes) {
   //maximum 100 boxes in row due to efficiency
-  xBoxes = Math.min( xBoxes, 100 ); 
+  //also not allowing negative or 0
+  xBoxes = Math.abs( Math.min( xBoxes, 100 )); 
 
   //error if no pane, 
   const pane = document.querySelector( '#' + paneId.replace('#')); 
@@ -35,24 +36,28 @@ const drawPane = function(paneId, xBoxes) {
 
 
 
-
-
 const createBoxNode = function (boxSize) {
   const box = document.createElement('div');
   box.setAttribute( 'class', 'pane-box');
   box.setAttribute( 'style', `width: ${boxSize}px; height: ${boxSize}px;` );
-  //box.addEventListener();
+  box.addEventListener('mouseover', (ev) => {
+    box.classList.add('mouseover');
+  }, false);
   
   return box;
 }
 
 
+/////
+///// on page load
+////
 
 
 drawPane( 'touchpane', 16);
 document.querySelector('button#reset').addEventListener('click', () => {
   document.querySelector('#popup').setAttribute( 'style', 'display: flex');
 });
+
 
 document.querySelector('button#confirm-reset').addEventListener('click', () => {
   const sideX = document.querySelector('#sideX').value;

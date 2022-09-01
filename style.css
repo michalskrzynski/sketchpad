@@ -8,8 +8,7 @@ body {
 }
 
 div.popup {
-  background-color: black;
-  opacity: 0.2;
+  background-color:rgba(222, 222, 222, 0.7);
   display: none;
   position: fixed;
   z-index: 1;
@@ -81,6 +80,11 @@ div#pane-hook {
 div.pane-box {
 }
 
-div.pane-box:hover { 
+div.pane-box { 
   background-color: aquamarine;
+}
+
+div.mouseover {
+  background-color: black;
+  transition: background-color 1s ease;
 }
