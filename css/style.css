@@ -1,0 +1,99 @@
+* {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0px;
+}
+
+div.popup {
+  background-color:rgba(222, 222, 222, 0.7);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+div.popup-box {
+  background-color: chocolate;
+  width: 600px;
+  padding: 60px 10px;
+  color: black;
+}
+
+div.top {
+  background-color: black;
+}
+
+div.header {
+  color: white;
+  font-weight: 900;
+
+  width: 960px;
+  margin: 0px auto;
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  display: inline;
+  font-size: 16px;
+}
+
+button.reset-button {
+  background-color: chartreuse;
+  border-radius: 5px;
+  border: 0px solid;
+  padding: 3px 10px;
+}
+
+div.page {
+  text-align: center;
+  width: 960px;
+  margin: 6px auto;
+
+  display: flex;
+}
+
+.toolbar {
+  width: 30%;
+  background-color: bisque;
+}
+
+div.touchpane {
+  width: 70%;
+}
+
+div#pane-hook {
+  display: flex;
+  flex-wrap: wrap;
+  /* normally we shouldnt worry about the distribution as it should fit perfectly,
+  but due to some division rounding (floor) the sum of boxes might not be exact 960. */
+  justify-content: center;
+  align-content: center;
+}
+
+div.pane-box {
+}
+
+div.pane-box { 
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid whitesmoke;
+  border-collapse: collapse;
+}
+
+div.mouseover {
+  background-color: black;
+  transition: background-color 1s ease;
+}
