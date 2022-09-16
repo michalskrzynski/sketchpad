@@ -1,4 +1,5 @@
 const screenWidth = 960;
+let currentColor = 'black';
 
 //paneId can come with or no # sign
 const drawPane = function(paneId, xBoxes) {
@@ -43,6 +44,14 @@ const createBoxNode = function (boxSize) {
   box.addEventListener('mouseover', (ev) => {
     box.classList.add('mouseover');
   }, false);
+
+  box.addEventListener('mouseout', (ev) => {
+    box.classList.remove('mouseover');
+  })
+
+  box.addEventListener('click', (ev) => {
+    box.style.backgroundColor = currentColor;
+  })
   
   return box;
 }
@@ -50,15 +59,16 @@ const createBoxNode = function (boxSize) {
 
 /////
 ///// on page load
-////
-
-
+/////
 drawPane( 'touchpane', 16);
+
+
+///// button reset
 document.querySelector('button#reset').addEventListener('click', () => {
   document.querySelector('#popup').setAttribute( 'style', 'display: flex');
 });
 
-
+///// modal confirm
 document.querySelector('button#confirm-reset').addEventListener('click', () => {
   const sideX = document.querySelector('#sideX').value;
   const xNumber = Number( sideX );
@@ -68,4 +78,15 @@ document.querySelector('button#confirm-reset').addEventListener('click', () => {
 
   //closing popup
   document.querySelector('#popup').setAttribute( 'style', 'display: none');
+});
+
+///// colorpicker
+document.querySelectorAll('.colorbox').forEach( (elem) => { 
+  elem.addEventListener('click', (e) => {
+    const classes = Array.from( e.currentTarget.classList );
+    const colorClass = classes.find( (v) => v.search(/^pick/g) !== -1 );
+    currentColor = colorClass.substring(4);
+    
+    document.querySelector('h4.current-color').style.backgroundColor = currentColor;
+  })
 });

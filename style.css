@@ -62,10 +62,16 @@ div.page {
   width: 960px;
 
   margin: 0 auto;
-  background-color: bisque;
+
+  display: flex;
+}
+
+.toolbar {
+  width: 30%;
 }
 
 div.touchpane {
+  width: 70%;
 }
 
 div#pane-hook {
@@ -81,10 +87,100 @@ div.pane-box {
 }
 
 div.pane-box { 
-  background-color: aquamarine;
+  background-color: white;
+  background-color: white;
+  border: 1px solid whitesmoke;
 }
 
 div.mouseover {
   background-color: black;
-  transition: background-color 1s ease;
+  transition: background-color 0.5s ease;
+}
+
+h4.current-color {
+  display: block;
+  width: auto;
+  padding: 10px;
+  text-align: left;
+  background-color: black;
+  color: white;
+  text-shadow: black 1px 0 10px;
+}
+
+.colorpicker {
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px;
+}
+
+.colorbox {
+  box-sizing: border-box;
+  padding: 1px;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 100%;
+  height: 40px;
+}
+
+.pickblack {
+  background-color: black;
+}
+
+.pickwhite {
+  background-color: white;
+}
+
+.pickred {
+  background-color: red;
+}
+
+.picklime {
+  background-color: lime;
+}
+
+.pickblue {
+  background-color: blue;
+}
+
+.pickyellow {
+  background-color: yellow;
+}
+
+.pickcyan {
+  background-color: cyan;
+}
+
+.pickmagenta {
+  background-color: magenta;
+}
+
+.picksilver {
+  background-color: silver;
+}
+
+.pickgrey {
+  background-color: grey;
+}
+
+.pickmaroon {
+  background-color: maroon;
+}
+
+.pickolive {
+  background-color: olive;
+}
+
+.pickgreen {
+  background-color: green;
+}
+
+.pickpurple {
+  background-color: purple;
+}
+
+.pickteal {
+  background-color: teal;
+}
+
+.picknavy {
+  background-color: navy;
 }
